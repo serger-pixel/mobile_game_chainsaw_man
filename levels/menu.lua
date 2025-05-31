@@ -528,7 +528,7 @@ function secondLevel.start()
 
     secondLevel.characterPlace = display.contentWidth * 0.5
     secondLevel.character = display.newRect(secondLevel.characterPlace, 0, secondLevel.animation.sheetOptionsRunRight.height *  (secondLevel.animation.scaleCharacter - 2),secondLevel.animation.sheetOptionsRunRight.width *  (secondLevel.animation.scaleCharacter - 2.7))
-    secondLevel.character:setFillColor(1, 43, 57, 0.5)
+    secondLevel.character:setFillColor(0,0,0, 0)
     secondLevel.character.y = display.contentCenterY* 1.3
     secondLevel.offset = display.contentWidth * 0.04
     secondLevel.fixAnimationTimer = timer.performWithDelay(1,function(self, event)
@@ -919,7 +919,7 @@ function firstLevel.start()
 
     firstLevel.characterPlace = display.contentWidth * 0.2
     firstLevel.character = display.newRect(firstLevel.characterPlace, 0, firstLevel.animation.sheetOptionsRun.height *  (firstLevel.animation.scaleCharacter - 2),firstLevel.animation.sheetOptionsRun.width *  (firstLevel.animation.scaleCharacter - 2))
-    firstLevel.character:setFillColor(1, 43, 57, 0.5)
+    firstLevel.character:setFillColor(0, 0, 0, 0)
     firstLevel.fixAnimationTimer = timer.performWithDelay(1,function(self, event)
         offset = display.contentWidth * 0.04
         firstLevel.animation.spriteRun.x = firstLevel.character.x + offset
@@ -1032,7 +1032,7 @@ function firstLevel.start()
 
     firstLevel.currentPoint = 0
 
-    firstLevel.finishPoint = 10
+    firstLevel.finishPoint = 30
 
     firstLevel.textPoint = display.newText({
         text = "Пройдено  " .. firstLevel.currentPoint .. "/" .. firstLevel.finishPoint .. " м",
